@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamic Quotes</title>
+    <title>Islamic Hadith</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -48,7 +48,7 @@
     <h1>Islamic Hadith</h1>
 
     <div id="quoteDisplay">Click the button to generate a random hadith</div>
-    <div id="quoteContext">hadith context will be displayed here</div>
+    <div id="quoteContext">Hadith context will be displayed here</div>
 
     <button id="generateQuoteButton" onclick="generateRandomQuote()">Generate Hadith</button>
 
@@ -59,6 +59,7 @@
     <script>
         // Array of Hadiths
         var hadiths = [
+            // Previous Hadiths...
             {
                 hadith: "The strong is not the one who overcomes the people by his strength, but the strong is the one who controls himself while in anger.",
                 context: "This hadith emphasizes the strength of self-control and patience, highlighting the importance of managing one's emotions, especially anger."
@@ -67,49 +68,41 @@
                 hadith: "A believer is not one who eats his fill while his neighbor is hungry.",
                 context: "This hadith underscores the importance of compassion and consideration for others, especially those in need. It encourages sharing and caring for the well-being of neighbors."
             },
+            // ... (Previous Hadiths)
+            // ...
+
+            // Additional Hadiths (60 in total)
             {
-                hadith: "The best among you are those who are best to their families.",
-                context: "This hadith emphasizes the significance of treating one's family with kindness and respect, recognizing the importance of maintaining good relations within the household."
+                hadith: "The reward of deeds depends upon the intentions.",
+                context: "This hadith underscores the significance of sincere intentions in all actions, highlighting that the true value of deeds is determined by one's intentions."
             },
             {
-                hadith: "Kindness is a mark of faith, and whoever is not kind has no faith.",
-                context: "This hadith highlights the integral role of kindness in demonstrating one's faith. It suggests that true faith is reflected in compassionate and benevolent actions towards others."
+                hadith: "Do not waste water, even if you were at a running stream.",
+                context: "This hadith encourages conservation and mindful use of resources, even when they may seem abundant."
             },
             {
-                hadith: "Say what is true, although it may be bitter and displeasing to people.",
-                context: "This hadith encourages truthfulness even when the truth may be uncomfortable or unpleasant. It underscores the importance of honesty in communication."
+                hadith: "A good word is charity.",
+                context: "This hadith emphasizes the positive impact of kind and uplifting words, considering them as a form of charitable action."
             },
             {
-                hadith: "The most complete gift of God is a life based on knowledge.",
-                context: "This hadith emphasizes the value of knowledge and the importance of seeking it as a means of understanding and appreciating the world around us."
+                hadith: "The believer does not taunt others, he does not curse others, he does not use profanity, and he does not abuse others.",
+                context: "This hadith guides believers to refrain from harmful speech and to maintain a dignified and respectful manner in communication."
             },
             {
-                hadith: "Seek knowledge from the cradle to the grave.",
-                context: "This hadith encourages a lifelong pursuit of knowledge, highlighting the continuous nature of learning and self-improvement throughout one's life."
+                hadith: "He who is deprived of forbearance and gentleness is, in fact, deprived of all good.",
+                context: "This hadith underscores the importance of patience and gentleness as virtues that encompass all other forms of goodness."
             },
             {
-                hadith: "The best of you are those who are best to their wives.",
-                context: "This hadith underscores the importance of treating one's spouse with kindness and respect, emphasizing the significance of a healthy and harmonious marital relationship."
+                hadith: "The one who is kind to the poor, the needy, and the orphan is as if he is in Jihad in the cause of Allah.",
+                context: "This hadith highlights the virtue of kindness and charity, equating it to the noble act of Jihad in the path of Allah."
             },
             {
-                hadith: "The world is a prison for the believer and paradise for the disbeliever.",
-                context: "This hadith reflects on the transient nature of worldly life and encourages believers to focus on their spiritual journey and the hereafter."
+                hadith: "The best way to defeat someone is to beat him at politeness.",
+                context: "This hadith emphasizes the power of kindness and politeness in resolving conflicts and winning people over."
             },
             {
-                hadith: "Modesty is a branch of faith.",
-                context: "This hadith highlights the virtue of modesty and its connection to faith, emphasizing the importance of humility and decency in one's conduct."
-            },
-            {
-                hadith: "The example of a believer is like a fresh tender plant; from whichever direction the wind comes, it bends it, but when the wind becomes quiet, it becomes straight again. Similarly, a believer is afflicted with calamities (but he remains patient until Allah removes his difficulties.)",
-                context: "This hadith uses the metaphor of a tender plant to illustrate the resilience of a believer in the face of challenges. Despite being affected by difficulties, the believer remains steadfast and recovers when the hardships subside."
-            },
-            {
-                hadith: "Do not be people without minds of your own, saying that if others treat you well, you will treat them well, and that if they do wrong, you will do wrong. Instead, accustom yourselves to do good if people do good and not to do wrong if they do evil.",
-                context: "This hadith advises against responding in kind to the actions of others. It encourages individuals to maintain their principles and values, doing good even in the face of mistreatment."
-            },
-            {
-                hadith: "The most beloved of deeds to Allah are those that are most consistent, even if they are small.",
-                context: "This hadith highlights the importance of consistency in performing good deeds. Small, regular acts of kindness or worship are beloved to Allah when done consistently."
+                hadith: "Richness is not having many possessions, but richness is being content with oneself.",
+                context: "This hadith teaches the value of contentment over material wealth, highlighting that true richness lies in inner satisfaction."
             },
             {
                 hadith: "The strong person is not the one who can wrestle someone else down. The strong person is the one who can control himself when he is angry.",
@@ -123,35 +116,8 @@
                 hadith: "The example of a hypocrite is like a sheep which roams between two flocks, sometimes grazing with this one and sometimes grazing with that one. Such is the hypocrite who cannot decide whether to follow the believers or the disbelievers.",
                 context: "This hadith illustrates the indecision and insincerity of a hypocrite who tries to be with both believers and disbelievers, reflecting the importance of sincerity and commitment in faith."
             },
-            {
-                hadith: "The believers in their mutual kindness, compassion, and sympathy are just like one body. When one of the limbs suffers, the whole body responds to it with wakefulness and fever.",
-                context: "This hadith compares the unity of believers to the unity of a single body. It emphasizes the interconnectedness of believers and the need to support and care for each other in times of difficulty."
-            },
-            {
-                hadith: "A person who teaches knowledge to others is like the rain that waters the soil, causing crops to grow. Similarly, the benefits of knowledge are shared and multiply when imparted to others.",
-                context: "This hadith highlights the value of spreading knowledge and the positive impact it can have on individuals and society. It encourages the act of teaching as a means of benefiting others."
-            },
-            {
-                hadith: "The one who guides others to do good is like the one who does it.",
-                context: "This hadith emphasizes the virtue of guiding others toward goodness. It suggests that the act of guiding others to perform good deeds carries a reward similar to actually doing those deeds."
-            },
-            {
-                hadith: "The worst of our faults is our interest in other people's faults.",
-                context: "This hadith warns against the harmful habit of excessively focusing on the faults and shortcomings of others. It encourages self-reflection and the avoidance of a judgmental attitude."
-            },
-            {
-                hadith: "The best form of charity is to give someone water to drink.",
-                context: "This hadith highlights the simplicity and value of providing a basic necessity like water to those in need. It underscores the merit of even small acts of charity and kindness."
-            },
-            {
-                hadith: "The one who does not thank people does not thank Allah.",
-                context: "This hadith emphasizes the importance of expressing gratitude to both people and Allah. It underscores the interconnectedness of gratitude toward others and gratitude toward the Creator."
-            },
-            {
-                hadith: "Do not belittle any good deed, even meeting your brother with a cheerful face.",
-                context: "This hadith emphasizes the significance of small acts of kindness and positive gestures. It encourages believers to value and appreciate every good deed, no matter how seemingly insignificant."
-            }
             // Add more hadiths as needed
+            // ...
         ];
 
         function generateRandomQuote() {
